@@ -1,5 +1,5 @@
 document.querySelectorAll(".btn").forEach((item) => {
   item.addEventListener("click", () => {
-    alert("hello again");
+    alert("hello piotrek");
   });
 });
