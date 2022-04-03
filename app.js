@@ -1,8 +1,10 @@
-var myElement = document.getElementsByClassName("myClass");
+let firstName = "kamil";
+let lastName = "boruc";
 
-document.write({ name: "hello" });
+let address = "main street";
 
-// alert("hello world");
+address = "first strees";
 
-console.log({ name: "hello" });
-console.log(myElement);
+console.log(firstName);
+console.log(lastName);
+console.log(address);
