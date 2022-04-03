@@ -1,19 +1,40 @@
-const car = {
-  make: "ford",
-  model: "focus",
-  year: 2005,
-  hybrid: true,
-  colors: ["blue", "black"],
-  drive() {
-    console.log("brum");
-  },
-
-  stop() {
-    console.log("aaaa");
-  },
+const person1 = {
+  name: "kamil",
+  age: 20,
+  status: "resident",
 };
 
-console.log(car.make);
-console.log(car.colors[0]);
-car.drive();
-car.stop();
+const person2 = {
+  name: "mamil",
+  age: 50,
+  status: "tourist",
+};
+
+if (person1.age >= 18 && person1.status === "resident") {
+  console.log("you can cast a vote");
+} else {
+  console.log("you're not elegible");
+}
+
+const dice = 1;
+
+switch (dice) {
+  case 1:
+    console.log(`the value is ${dice}`);
+    break;
+  case 2:
+    console.log(`the value is ${dice}`);
+    break;
+  case 3:
+    console.log(`the value is ${dice}`);
+    break;
+  case 4:
+    console.log(`the value is ${dice}`);
+    break;
+  case 5:
+    console.log(`the value is ${dice}`);
+    break;
+  default:
+    console.log(`the value is ${dice}`);
+    break;
+}
