@@ -1,8 +1,11 @@
-let fruits = ["apple", "pear", "avocado", 42];
+calculateTotal = (subTotal, tax) => subTotal + tax;
 
-const firstFruit = fruits[0];
-fruits[-1] = firstFruit;
+var order1, order2, order3;
 
-for (i = 0; i <= fruits.length; i++) {
-  console.log(fruits[i]);
-}
+order1 = calculateTotal(100, 10);
+order2 = calculateTotal(200, 10);
+order3 = calculateTotal(300, 10);
+
+console.log(order1);
+console.log(order2);
+console.log(order3);
