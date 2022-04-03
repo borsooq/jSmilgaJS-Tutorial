@@ -1,10 +1,6 @@
-let firstName = "kamil";
-let lastName = "boruc";
+let street = "street";
+let country = "country";
 
-let address = "main street";
+let fullMailingAddress = street + " " + country;
 
-address = "first strees";
-
-console.log(firstName);
-console.log(lastName);
-console.log(address);
+console.log(fullMailingAddress);
