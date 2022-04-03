@@ -1,9 +1,8 @@
-const score1 = 1;
-const score2 = 10;
-const score3 = 100;
+let fruits = ["apple", "pear", "avocado", 42];
 
-const totalScore = score1 + score2 + score3;
-const average = totalScore / 3;
+const firstFruit = fruits[0];
+fruits[-1] = firstFruit;
 
-console.log(totalScore);
-console.log(average);
+for (i = 0; i <= fruits.length; i++) {
+  console.log(fruits[i]);
+}
