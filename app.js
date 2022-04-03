@@ -1,11 +1,19 @@
-calculateTotal = (subTotal, tax) => subTotal + tax;
+const car = {
+  make: "ford",
+  model: "focus",
+  year: 2005,
+  hybrid: true,
+  colors: ["blue", "black"],
+  drive() {
+    console.log("brum");
+  },
 
-var order1, order2, order3;
+  stop() {
+    console.log("aaaa");
+  },
+};
 
-order1 = calculateTotal(100, 10);
-order2 = calculateTotal(200, 10);
-order3 = calculateTotal(300, 10);
-
-console.log(order1);
-console.log(order2);
-console.log(order3);
+console.log(car.make);
+console.log(car.colors[0]);
+car.drive();
+car.stop();
