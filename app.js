@@ -1,18 +1,23 @@
-//unary operator
-let text = "some text";
+//LocalvsGlobal
 
-console.log(typeof text);
+let name = "bobo";
 
-//binary operator
-let number = 3;
-let number2 = 2 + 5;
-
-//ternary operator
-const value = 2 > 1;
-if (value) {
-  console.log("value is true");
-} else {
-  console.log("value is false");
+function calculate() {
+  const name = "john";
+  const age = 25;
+  becomesGlobal = "global variable";
 }
 
-value ? console.log("value is true") : console.log("value is false");
+calculate();
+console.log(becomesGlobal);
+
+if (true) {
+  const name = "john";
+}
+
+{
+  const name = "john";
+  const special = "special";
+}
+
+console.log(`my name is => ${name} nad I am awesome`);
