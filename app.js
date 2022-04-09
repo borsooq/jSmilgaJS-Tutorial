@@ -1,70 +1,45 @@
-let names = ["john", "bobo", "barry", "olga", "ben"];
+const number = 1;
+let number2 = number;
+number2 = 7;
+console.log(`the first value is => ${number}`);
+console.log(`the second value is => ${number2}`);
 
-console.log(names.length);
-console.log(names[4]);
-console.log(names[names.length - 1]);
+let person = { name: "bob" };
+let person1 = { ...person };
+let person2 = person;
+person2.name = "susy";
+console.log(`the first person is => ${person.name}`);
+console.log(`the first person1 is => ${person1.name}`);
+console.log(`the second person is => ${person2.name}`);
 
-//concat
-const lastNames = ["pepper", "onion", "banana"];
-const allNames = names.concat(lastNames);
-console.log(allNames.length);
+//null && undefined
+let number1 = 20 + null;
+console.log(number1);
+let number3 = 20 + undefined;
+console.log(number3);
 
-//reverse
-console.log(allNames.reverse());
+//truthy && falsy
+const bool1 = true;
+const bool2 = 2 > 1;
+const text = "john";
+const text1 = "";
 
-//unshift
-allNames.unshift("susy");
-allNames.unshift("anna");
-console.log(allNames);
-
-//shift
-allNames.shift();
-console.log(allNames);
-
-//push
-allNames.push("kamil");
-console.log(allNames);
-
-//pop
-allNames.pop();
-console.log(allNames);
-
-//slice
-console.log(allNames.slice(0, 3));
-
-//splice - mutates original array
-const specificNames = allNames.splice(1, 2);
-console.log(allNames);
-console.log(specificNames);
-
-//Arrays and for loop
-const names1 = ["john", "bobo", "barry", "olga", "ben"];
-const lastNames1 = "shakeandbake";
-
-let newArray = [];
-
-//for loop
-for (let i = 0; i <= names1.length - 1; i++) {
-  newArray.push(`${names1[i]} ${lastNames1}`);
+if (bool1) {
+  console.log("Hey, it works");
 }
 
-console.log(newArray);
-
-const gas = [20, 40, 100];
-const food = [10, 40, 50];
-function calculateTotal(arr) {
-  let total = 0;
-  for (let i = 0; i < arr.length; i++) {
-    total += arr[i];
-  }
-
-  if (total > 100) {
-    console.log("Whooaaa, your spending too much!");
-  } else {
-    console.log("Good");
-  }
-
-  return total;
+if (bool2) {
+  console.log("Hey, it also works");
 }
 
-console.log(`total is => ${calculateTotal(gas) + calculateTotal(food)}`);
+if (text) {
+  console.log("hey, the value is truthy");
+} else {
+  console.log("hey, the value is falsy");
+}
+
+if (text1) {
+  console.log("hey, the value is truthy");
+} else {
+  console.log("hey, the value is falsy");
+}
