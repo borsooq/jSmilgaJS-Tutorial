@@ -49,3 +49,22 @@ for (let i = 0; i <= names1.length - 1; i++) {
 }
 
 console.log(newArray);
+
+const gas = [20, 40, 100];
+const food = [10, 40, 50];
+function calculateTotal(arr) {
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    total += arr[i];
+  }
+
+  if (total > 100) {
+    console.log("Whooaaa, your spending too much!");
+  } else {
+    console.log("Good");
+  }
+
+  return total;
+}
+
+console.log(`total is => ${calculateTotal(gas) + calculateTotal(food)}`);
