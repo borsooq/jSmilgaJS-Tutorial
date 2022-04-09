@@ -1,45 +1,18 @@
-const number = 1;
-let number2 = number;
-number2 = 7;
-console.log(`the first value is => ${number}`);
-console.log(`the second value is => ${number2}`);
+//unary operator
+let text = "some text";
 
-let person = { name: "bob" };
-let person1 = { ...person };
-let person2 = person;
-person2.name = "susy";
-console.log(`the first person is => ${person.name}`);
-console.log(`the first person1 is => ${person1.name}`);
-console.log(`the second person is => ${person2.name}`);
+console.log(typeof text);
 
-//null && undefined
-let number1 = 20 + null;
-console.log(number1);
-let number3 = 20 + undefined;
-console.log(number3);
+//binary operator
+let number = 3;
+let number2 = 2 + 5;
 
-//truthy && falsy
-const bool1 = true;
-const bool2 = 2 > 1;
-const text = "john";
-const text1 = "";
-
-if (bool1) {
-  console.log("Hey, it works");
-}
-
-if (bool2) {
-  console.log("Hey, it also works");
-}
-
-if (text) {
-  console.log("hey, the value is truthy");
+//ternary operator
+const value = 2 > 1;
+if (value) {
+  console.log("value is true");
 } else {
-  console.log("hey, the value is falsy");
+  console.log("value is false");
 }
 
-if (text1) {
-  console.log("hey, the value is truthy");
-} else {
-  console.log("hey, the value is falsy");
-}
+value ? console.log("value is true") : console.log("value is false");
