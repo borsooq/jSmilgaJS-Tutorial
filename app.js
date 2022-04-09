@@ -1,19 +1,28 @@
-//Variable lookup
-
-const globalNumber = 5;
-
-function add(num1, num2) {
-  const globalNumber = 20;
-  const result = num1 + num2 + globalNumber;
-
-  function multiply() {
-    const globalNumber = 100;
-    const multiplyResult = result * globalNumber;
-    console.log(multiplyResult);
-  }
-
-  multiply();
-  return result;
+function morning(name) {
+  return `Good morning ${name.toUpperCase()}`;
 }
 
-console.log(add(3, 4));
+function afternoon(name) {
+  return `Good afternoon ${name.toUpperCase()}`;
+}
+
+function greet(name, cb) {
+  const myName = "john";
+  console.log(`${cb(name)} ${name}, my name is ${myName}`);
+}
+
+greet("bobo", morning);
+greet("peter", morning);
+
+greet("bobo", afternoon);
+greet("peter", afternoon);
+
+// function greetMorning(name) {
+//   const myName = "john";
+//   console.log(`Good morning ${name}, my name is ${myName}`);
+// }
+
+// function greetAfternoon(name) {
+//   const myName = "john";
+//   console.log(`Good afternoon ${name}, my name is ${myName}`);
+// }
