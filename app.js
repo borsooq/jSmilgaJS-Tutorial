@@ -1,23 +1,19 @@
-//LocalvsGlobal
+//Variable lookup
 
-let name = "bobo";
+const globalNumber = 5;
 
-function calculate() {
-  const name = "john";
-  const age = 25;
-  becomesGlobal = "global variable";
+function add(num1, num2) {
+  const globalNumber = 20;
+  const result = num1 + num2 + globalNumber;
+
+  function multiply() {
+    const globalNumber = 100;
+    const multiplyResult = result * globalNumber;
+    console.log(multiplyResult);
+  }
+
+  multiply();
+  return result;
 }
 
-calculate();
-console.log(becomesGlobal);
-
-if (true) {
-  const name = "john";
-}
-
-{
-  const name = "john";
-  const special = "special";
-}
-
-console.log(`my name is => ${name} nad I am awesome`);
+console.log(add(3, 4));
