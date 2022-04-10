@@ -1,19 +1,41 @@
-// const number = 4.56789;
-// const result = Math.floor(number);
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+const days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 
-// const number = 4.56789;
-// const result = Math.ceil(number);
+const date = new Date("1/12/2004");
 
-// const number = 89;
-// const result = Math.sqrt(number);
+console.log(date);
 
-const number = 89;
-//const result = Math.sqrt(number);
+const month = date.getMonth();
 
-//console.log(result);
-console.log(Math.PI);
-console.log(Math.min(5, 6, 7, 1, 2));
-console.log(Math.max(5, 6, 7, 1, 2));
+console.log(months[month]);
 
-const result = Math.floor(Math.random() * 10 + 1);
-console.log(result);
+const day = date.getDay();
+
+console.log(days[day]);
+
+const sentence = `${days[day]}, ${date.getDate()} ${
+  months[month]
+} ${date.getFullYear()}`;
+
+document.body.innerHTML = sentence;
