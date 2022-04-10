@@ -1,3 +1,5 @@
+//LocalvsGlobal
+
 let name = "bobo";
 name = "peter";
 
