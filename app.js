@@ -1,16 +1,5 @@
-const headings = document.getElementsByTagName("h2");
-headings[0].style.color = "red";
-console.log(headings.length);
+const listItems = document.getElementsByClassName("special");
 
-const items = document.getElementsByTagName("li");
+console.log(listItems);
 
-items[2].style.color = "orange";
-
-const beterItems = [...items];
-
-beterItems.forEach(function (item) {
-  console.log(item);
-});
-
-console.log(items);
-console.log(beterItems);
+listItems[listItems.length - 1].style.color = "blue";
