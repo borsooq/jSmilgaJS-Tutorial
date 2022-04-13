@@ -1,6 +1,16 @@
-const heading1 = document.getElementById("title");
-heading1.style.color = "red";
+const headings = document.getElementsByTagName("h2");
+headings[0].style.color = "red";
+console.log(headings.length);
 
-const btn = document.getElementById("btn");
-btn.style.backgroundColor = "blue";
-btn.style.color = "white";
+const items = document.getElementsByTagName("li");
+
+items[2].style.color = "orange";
+
+const beterItems = [...items];
+
+beterItems.forEach(function (item) {
+  console.log(item);
+});
+
+console.log(items);
+console.log(beterItems);
