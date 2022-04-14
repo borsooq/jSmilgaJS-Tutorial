@@ -1,20 +1,8 @@
-const first = document.querySelector(".first");
-const nextSibling = (first.nextSibling.nextSibling.style.color = "red");
+const item = document.getElementById("special");
 
-console.log(first);
-console.log(nextSibling);
+const value = item.firstChild.nodeValue;
 
-const last = document.querySelector("#last");
+const easyValue = item.textContent;
 
-console.log(last);
-
-const third = last.previousSibling.previousSibling;
-
-const third1 = last.previousSibling;
-console.log(third);
-
-third.style.color = "blue";
-
-console.log(third1);
-
-first.nextElementSibling.style.color = "purple";
+console.log(value);
+console.log(easyValue);
