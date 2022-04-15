@@ -1,19 +1,16 @@
 .red {
     background: red;
     color: white;
-    font-size: 3rem;
 }
 
 .blue {
     background: blue;
-    color: white;
-    font-size: 3rem;
+    color: #ffffff;
 }
 
 .title {
     background: blue;
     color: white;
-    font-size: 3rem;
     text-transform: capitalize;
 }
 
