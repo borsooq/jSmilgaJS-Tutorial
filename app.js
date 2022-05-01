@@ -1,25 +1,33 @@
-// call - runs instantly, arguments - list of items
-// apply - runs instantly, arguments - array of items
-// bind - assign
+const num1 = 30;
+const num2 = 50;
 
-const counter = {
-  count: 0,
-  increment() {
-    console.log(this);
-    this.count++;
-    console.log(this.count);
-  },
-};
+function add() {
+  console.log(`the result is : ${num1 + num2}`);
+}
 
-const btn = document.querySelector(".increment");
+add();
 
-//fail
-//btn.addEventListener("click", counter.increment);
-//pass
+(function () {
+  const num3 = 30;
+  const num4 = 50;
+  console.log(`the result is : ${num3 + num4}`);
+})();
 
-//some edge cases
-//btn.addEventListener("click", counter.increment.bind(counter));
+(function () {
+  const num3 = 30;
+  const num4 = 50;
+  console.log(`the result is : ${num3 + num4}`);
+})();
 
-const increment = counter.increment.bind(counter);
-btn.addEventListener("click", increment);
-btn.removeEventListener("click", increment);
+//pass arguments
+(function (num3, num4) {
+  console.log(`the result is : ${num3 + num4}`);
+})(num1, num2);
+
+//return/assignm to variable
+const result = (function (num3, num4) {
+  console.log(`the result is : ${num3 + num4}`);
+  return num3 + num4;
+})(num1, num2);
+
+console.log(result);
