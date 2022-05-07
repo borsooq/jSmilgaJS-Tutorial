@@ -1,19 +1,12 @@
-//string includes
-const products = [
-  "high-back bench",
-  "albany table",
-  "accent chair",
-  "wooden table",
-];
+import { random, people } from "./utils/data.js";
+import showPeople from "./utils/showPeople.js";
+import get from "./utils/getElement.js";
 
-let randomItem = "wooden table";
-let randomItem1 = "high-back bench";
+console.log(random);
 
-const isIncluded = products.includes(randomItem);
-const isIncluded1 = products.includes(randomItem1, 1);
-console.log(isIncluded);
-console.log(isIncluded1);
+const container = get(".container");
+const btn = get(".btn");
 
-if (products.includes(randomItem)) {
-  console.log(`Yeah, it is on the list`);
-}
+btn.addEventListener("click", () => {
+  container.innerHTML = showPeople(people);
+});
