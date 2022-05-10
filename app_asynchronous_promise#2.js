@@ -7,9 +7,14 @@ const container = document.querySelector(".img-container");
 //const url = "https://source.unsplash.com/random";
 const btn = document.querySelector(".btn");
 
-btn.addEventListener("click", async () => {
-  const result = await displayColor();
-  console.log(result);
+btn.addEventListener("click", () => {
+  addColor(1000, heading1, "red").then(() => {
+    addColor(1000, heading2, "green")
+      .then(() => {
+        addColor(1000, heading3, "blue");
+      })
+      .catch((err) => console.log(err));
+  });
 });
 
 function addColor(time, element, color) {
@@ -23,17 +28,4 @@ function addColor(time, element, color) {
       reject(new Error(`there is no such element ${element}`));
     }
   });
-}
-
-//async return a Promise!
-async function displayColor() {
-  try {
-    const first = await addColor(1000, heading1, "red");
-    await addColor(1000, heading2, "blue");
-    await addColor(1000, heading3, "green");
-    console.log(first);
-  } catch (error) {
-    console.log(error);
-  }
-  return "hello";
 }
